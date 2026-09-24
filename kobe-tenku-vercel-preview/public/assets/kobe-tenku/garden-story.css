@@ -1,0 +1,85 @@
+.kobe-tenku-front .garden-story{
+  --story-indent:clamp(48px,5.4vw,76px);
+  position:relative;
+  height:380svh;
+  color:var(--ink);
+  background:var(--paper);
+}
+.kobe-tenku-front .garden-story__stage{
+  position:sticky;
+  top:0;
+  height:100svh;
+  min-height:620px;
+  overflow:hidden;
+  background:var(--paper);
+}
+.kobe-tenku-front .garden-story__chapter{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:stretch;
+  gap:clamp(22px,3vh,38px);
+  padding:clamp(64px,7vh,92px) 0 clamp(28px,4vh,52px);
+  opacity:0;
+  transform:none;
+  filter:none;
+  z-index:0;
+  transition:opacity 1.25s ease;
+  will-change:opacity;
+  color:#fff;
+  background-position:center;
+  background-size:cover;
+}
+.kobe-tenku-front .garden-story__chapter--stay{background-image:url("images/day.jpg")}
+.kobe-tenku-front .garden-story__chapter--spa{background-image:url("images/onsen-day.png")}
+.kobe-tenku-front .garden-story__chapter--evening{background-image:url("images/star-trails.jpg")}
+.kobe-tenku-front .garden-story__chapter::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(5,30,31,.62),rgba(5,30,31,.24) 62%,rgba(5,30,31,.38)),linear-gradient(0deg,rgba(5,30,31,.42),transparent 58%)}
+.kobe-tenku-front .garden-story__chapter::after{content:"";position:absolute;z-index:3;left:50%;bottom:22px;width:14px;height:14px;border-right:1px solid rgba(255,255,255,.92);border-bottom:1px solid rgba(255,255,255,.92);transform:translateX(-50%) rotate(45deg);animation:kt-story-scroll-cue 1.8s ease-in-out infinite}
+.kobe-tenku-front .garden-story__chapter>*{position:relative;z-index:1}
+@keyframes kt-story-scroll-cue{0%,100%{opacity:.25;translate:0 -5px}50%{opacity:1;translate:0 7px}}
+.kobe-tenku-front .garden-story__chapter:first-child,.kobe-tenku-front .garden-story__chapter.is-active{z-index:1;opacity:1;transform:none}
+.kobe-tenku-front .garden-story__chapter:first-child:not(.is-active){opacity:0}
+.kobe-tenku-front .garden-story h2,.kobe-tenku-front .garden-story h3{font-family:var(--serif);font-weight:400;line-height:1.6;letter-spacing:.08em;margin:0 0 22px}
+.kobe-tenku-front .garden-story h2{font-size:clamp(30px,3.4vw,48px)}
+.kobe-tenku-front .garden-story h3{font-size:clamp(25px,2.7vw,36px);white-space:nowrap}
+.kobe-tenku-front .garden-story p{font-size:16px;line-height:2.15;margin:0}
+.kobe-tenku-front .garden-story__pause,.kobe-tenku-front .garden-story__spa-copy,.kobe-tenku-front .garden-story__evening{width:calc(100% - var(--story-indent) * 2);max-width:920px;margin:0 var(--story-indent);text-align:left}
+.kobe-tenku-front .garden-story__strip{display:grid;gap:4px;min-width:0;overflow:hidden}
+.kobe-tenku-front .garden-story__strip figure{min-width:0;margin:0}
+.kobe-tenku-front .garden-story__strip img{display:block;width:100%;height:100%;object-fit:cover}
+.kobe-tenku-front .garden-story__strip--opening{grid-template-columns:repeat(3,1fr);align-items:center}
+.kobe-tenku-front .garden-story__strip--opening{width:calc(100% - var(--story-indent));margin-left:auto}
+.kobe-tenku-front .garden-story__strip--opening img{height:auto;aspect-ratio:3/2;object-fit:cover}
+.kobe-tenku-front .garden-story__bath{width:calc(100% - var(--story-indent));min-width:0;margin-left:auto}
+.kobe-tenku-front .garden-story__bath-details{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.kobe-tenku-front .garden-story__bath-details img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.kobe-tenku-front .garden-story__strip--evening{width:calc(100% - var(--story-indent));margin-left:auto;grid-template-columns:.6665fr 1.7778fr;align-items:center;gap:16px}
+.kobe-tenku-front .garden-story__strip--evening img{height:auto;object-fit:contain}
+.kobe-tenku-front .garden-story__strip--evening figure:nth-child(2) img{object-position:center 48%}
+.kobe-tenku-front .lights__art--sign .watercolor-graphic{mix-blend-mode:normal}
+@media(max-width:700px){
+.kobe-tenku-front .garden-story{--story-indent:32px;height:380svh}
+.kobe-tenku-front .garden-story__stage{min-height:560px}
+.kobe-tenku-front .garden-story__chapter,.kobe-tenku-front .garden-story__chapter--spa,.kobe-tenku-front .garden-story__chapter--evening{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:clamp(24px,5vh,42px);
+    padding:72px 0 42px;
+  }
+.kobe-tenku-front .garden-story__pause,.kobe-tenku-front .garden-story__spa-copy,.kobe-tenku-front .garden-story__evening{width:auto;max-width:none;margin:0 var(--story-indent)}
+.kobe-tenku-front .garden-story h3{font-size:clamp(24px,7vw,31px);margin-bottom:15px}
+.kobe-tenku-front .garden-story h3{white-space:normal}
+.kobe-tenku-front .garden-story p{font-size:14px;line-height:1.95}
+.kobe-tenku-front .garden-story br{display:none}
+.kobe-tenku-front .garden-story h3 br{display:initial}
+.kobe-tenku-front .garden-story__strip--opening,.kobe-tenku-front .garden-story__bath-details{width:calc(100% - 24px);margin-left:24px;grid-template-columns:repeat(3,1fr)}
+.kobe-tenku-front .garden-story__bath{width:100%}
+.kobe-tenku-front .garden-story__strip--evening{width:calc(100% - 24px);margin-left:24px;grid-template-columns:.7fr 1.55fr;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){
+.kobe-tenku-front .garden-story__chapter{transform:none!important;transition:none}
+.kobe-tenku-front .garden-story__chapter::after{animation:none}
+}

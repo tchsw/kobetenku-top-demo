@@ -1,0 +1,32 @@
+.kobe-tenku-front .access{position:relative;isolation:isolate;background:#f4f0e5;color:var(--ink);padding:80px max(6vw,24px);scroll-margin-top:80px}
+.kobe-tenku-front .content-logos{padding:44px max(6vw,24px) 24px;background:#f4f0e5;color:var(--ink);overflow:hidden}
+.kobe-tenku-front .content-logos__inner{position:relative;max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;gap:0}
+.kobe-tenku-front .content-logos img{display:block;justify-self:center;width:auto;max-width:min(100%,192px);height:auto;padding:0 27px}
+.kobe-tenku-front .content-logos img+img{border-left:0}
+.kobe-tenku-front .content-logos__inner::before,.kobe-tenku-front .content-logos__inner::after{content:"";position:absolute;top:50%;width:1px;height:78px;background:#789a9c;transform:translateY(-50%)}
+.kobe-tenku-front .content-logos__inner::before{left:33.333%}
+.kobe-tenku-front .content-logos__inner::after{left:66.666%}
+.kobe-tenku-front .access__inner{position:relative;z-index:2;max-width:1200px;margin:auto;display:grid;grid-template-columns:1.35fr 1fr;gap:8%;align-items:center;will-change:translate}
+.kobe-tenku-front .access__map{margin:0;min-width:0}
+.kobe-tenku-front .access__map img{display:block;width:100%;height:auto}
+.kobe-tenku-front .access__copy h2{font:400 clamp(28px,3vw,40px)/1.5 var(--serif);letter-spacing:.12em;margin:0 0 32px}
+.kobe-tenku-front .access__times{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid #17372e30}
+.kobe-tenku-front .access__times p{font-size:16px;line-height:2;margin:8px 0}
+.kobe-tenku-front .access__times strong{font:inherit;margin-left:0;white-space:normal}
+.kobe-tenku-front .access__shuttle{margin-top:18px!important;font-size:14px!important;line-height:1.8!important}
+.kobe-tenku-front .access__shuttle small{display:block;font-size:11px;line-height:1.8;letter-spacing:.05em}
+.kobe-tenku-front .access address{font-style:normal;font-size:16px;line-height:2}
+.kobe-tenku-front .access address span{font-size:14px}
+.kobe-tenku-front .destination__spa-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:-8px 0 28px}
+.kobe-tenku-front .destination__spa-photos img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+@media(max-width:700px){
+.kobe-tenku-front .content-logos{padding:30px 24px 16px}
+.kobe-tenku-front .content-logos__inner{grid-template-columns:repeat(3,1fr)}
+.kobe-tenku-front .content-logos img{max-width:100%;padding:0 8px}
+.kobe-tenku-front .content-logos__inner::before,.kobe-tenku-front .content-logos__inner::after{height:48px}
+.kobe-tenku-front .access{padding:52px 24px 60px}
+.kobe-tenku-front .access__inner{grid-template-columns:1fr;gap:32px}
+.kobe-tenku-front .access__copy h2{margin-bottom:20px}
+.kobe-tenku-front .access__map{width:100%}
+.kobe-tenku-front .destination__spa-photos{gap:6px}
+}

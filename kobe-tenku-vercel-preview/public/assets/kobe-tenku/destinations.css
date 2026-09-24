@@ -1,0 +1,52 @@
+.kobe-tenku-front .destinations{position:relative;overflow:hidden;padding:120px max(6vw,24px) 140px;background:#fcfaf5;color:var(--ink)}
+.kobe-tenku-front .destinations::before,.kobe-tenku-front .destinations::after{content:"";position:absolute;left:0;right:0;height:18px;background:var(--paper);pointer-events:none;clip-path:polygon(0 0,100% 0,100% 45%,97% 61%,93% 32%,88% 74%,84% 43%,80% 64%,75% 33%,70% 67%,65% 44%,60% 81%,55% 45%,51% 69%,47% 37%,42% 62%,38% 31%,34% 70%,29% 42%,24% 76%,20% 40%,15% 67%,10% 35%,5% 70%,0 40%)}
+.kobe-tenku-front .destinations::before{top:0}
+.kobe-tenku-front .destinations::after{display:none}
+.kobe-tenku-front .destinations-mountains{position:relative;overflow:hidden;width:100%;aspect-ratio:1672 / 580;background:#fcfaf5;pointer-events:none}
+.kobe-tenku-front .destinations-mountains img{position:absolute;display:block;width:108%;max-width:none;height:auto;left:-4%;top:-15vw}
+.kobe-tenku-front .access .destinations-mountains{z-index:1;left:auto;width:100vw;margin:-18px calc(50% - 50vw) calc(-80px - 29vw);aspect-ratio:1672 / 941;background:transparent;overflow:visible;will-change:translate}
+.kobe-tenku-front .access .destinations-mountains img{position:static;width:100%;max-width:none;height:auto;transform:translateY(-29vw)}
+.kobe-tenku-front .destinations__heading{max-width:1120px;margin:0 auto 90px;display:grid;grid-template-columns:1.1fr 1fr;gap:12%;align-items:end}
+.kobe-tenku-front .destinations__heading h2{font:400 clamp(32px,3.6vw,52px)/1.65 var(--serif);margin:0;letter-spacing:.09em}
+.kobe-tenku-front .destinations__heading p{font-size:16px;line-height:2.2;margin:0;max-width:440px}
+.kobe-tenku-front .destinations__journey{position:relative;max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;column-gap:18%;align-items:start}
+.kobe-tenku-front .destinations__trail{position:absolute;inset:0;width:100%;height:100%;color:#899081;pointer-events:none}
+.kobe-tenku-front .destination{position:relative;z-index:1;min-width:0;margin:0;padding:0 0 60px}
+.kobe-tenku-front .destination:nth-of-type(even){margin-top:180px}
+.kobe-tenku-front .destination:nth-of-type(3){margin-top:-45px}
+.kobe-tenku-front .destination:nth-of-type(4){margin-top:125px}
+.kobe-tenku-front .destination__photo{margin:0 0 30px;overflow:hidden;aspect-ratio:1.42;clip-path:polygon(0 4%,6% 2%,12% 4%,19% 1%,25% 3%,32% 0,39% 3%,46% 1%,53% 3%,60% 0,68% 3%,74% 1%,82% 3%,89% 0,95% 3%,100% 1%,99% 14%,100% 23%,98% 32%,100% 41%,98% 50%,100% 59%,97% 66%,99% 76%,95% 81%,97% 88%,90% 87%,85% 93%,79% 91%,73% 96%,65% 93%,58% 99%,50% 96%,42% 99%,35% 96%,28% 99%,22% 96%,14% 100%,8% 96%,0 98%)}
+.kobe-tenku-front .destination__photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.kobe-tenku-front .destination--spa .destination__photo{transform:rotate(2deg)}
+.kobe-tenku-front .destination--play .destination__photo{transform:rotate(-2deg)}
+.kobe-tenku-front .destination--gather .destination__photo{aspect-ratio:1.1;width:86%;margin-left:auto}
+.kobe-tenku-front .destination--gather .destination__photo img{object-position:center 42%}
+.kobe-tenku-front .destination__copy{max-width:370px;padding:0 12px}
+.kobe-tenku-front .destination:nth-of-type(even) .destination__copy{margin-left:auto}
+.kobe-tenku-front .destination__copy h3{font:400 clamp(28px,2.8vw,38px)/1.5 var(--serif);letter-spacing:.12em;margin:0 0 16px}
+.kobe-tenku-front .destination__copy p{font-size:16px;line-height:2.2;margin:0 0 26px}
+.kobe-tenku-front .destination__copy a{display:inline-flex;gap:40px;align-items:center;min-height:44px;border:1px solid #667567;border-radius:50px;padding:6px 22px;font-size:14px;transition:background .25s,color .25s}
+.kobe-tenku-front .destination__copy a:hover{background:var(--ink);color:#fff}
+.kobe-tenku-front .destination__copy a:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
+@media(hover:hover){
+.kobe-tenku-front .destination:hover .destination__photo img{transform:scale(1.035)}
+}
+@media(max-width:700px){
+.kobe-tenku-front .destinations{padding:80px 24px 90px}
+.kobe-tenku-front .destinations__heading{display:block;margin-bottom:60px}
+.kobe-tenku-front .destinations__heading h2{font-size:30px;margin-bottom:24px}
+.kobe-tenku-front .destinations__heading p{max-width:none}
+.kobe-tenku-front .destinations__journey{display:block}
+.kobe-tenku-front .destinations__trail{display:none}
+.kobe-tenku-front .destination,.kobe-tenku-front .destination:nth-of-type(n){margin:0;padding-bottom:64px}
+.kobe-tenku-front .destination:last-child{padding-bottom:0}
+.kobe-tenku-front .destination__photo{width:94%;margin-bottom:24px}
+.kobe-tenku-front .destination:nth-of-type(even) .destination__photo{margin-left:auto}
+.kobe-tenku-front .destination__copy,.kobe-tenku-front .destination:nth-of-type(even) .destination__copy{max-width:none;margin:0;padding:0 8px}
+.kobe-tenku-front .destination__copy h3{font-size:28px}
+.kobe-tenku-front .destination--gather .destination__photo{width:86%;aspect-ratio:1.2}
+}
+@media(prefers-reduced-motion:reduce){
+.kobe-tenku-front .destination__photo img,.kobe-tenku-front .destination__copy a{transition:none}
+.kobe-tenku-front .destination:hover .destination__photo img{transform:none}
+}
